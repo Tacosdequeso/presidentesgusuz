@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis La Puerta de Mendoza</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1920/1080') center/cover;
+            height: 100vh;
+        }
+        .gallery-img {
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #E91E63;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-black bg-opacity-90 z-50 px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="text-2xl font-bold">LLPDM</div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#biografia" class="nav-link">Biografía</a>
+                <a href="#logros" class="nav-link">Logros</a>
+                <a href="#carrera" class="nav-link">Carrera política</a>
+                <a href="#antecedentes" class="nav-link">Antecedentes militares</a>
+                <a href="#economia" class="nav-link">Ámbito Económico</a>
+                <a href="#galeria" class="nav-link">Galería</a>
+            </div>
+            <button class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700">
+                Más información
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-center">
+        <div>
+            <h1 class="text-6xl font-bold mb-4">Descubrir</h1>
+            <h2 class="text-5xl font-bold mb-6">Luis La Puerta de Mendoza</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Bienvenido al legado de Luis La Puerta de Mendoza, una distinguida figura militar y política peruana. 
+                Explore sus breves pero impactantes presidencias y su influencia duradera en la historia de la nación.
+            </p>
+            <div class="space-x-4">
+                <button class="bg-white text-black px-6 py-3 rounded hover:bg-gray-200">
+                    Más información
+                </button>
+                <button class="border-2 border-white px-6 py-3 rounded hover:bg-white hover:text-black">
+                    Ver galería
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secciones principales -->
+    <section id="biografia" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">Biografía</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <img src="/api/placeholder/600/400" alt="Biografía" class="rounded-lg w-full">
+                </div>
+                <div>
+                    <p class="text-lg">
+                        Luis La Puerta de Mendoza fue un destacado militar y político peruano que dejó una huella 
+                        indeleble en la historia del país. Su vida estuvo marcada por el servicio público y su 
+                        compromiso con el desarrollo nacional.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="py-20 px-6 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">Galería</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <img src="/api/placeholder/400/300" alt="Imagen 1" class="w-full rounded-lg gallery-img">
+                <img src="/api/placeholder/400/300" alt="Imagen 2" class="w-full rounded-lg gallery-img">
+                <img src="/api/placeholder/400/300" alt="Imagen 3" class="w-full rounded-lg gallery-img">
+                <img src="/api/placeholder/400/300" alt="Imagen 4" class="w-full rounded-lg gallery-img">
+                <img src="/api/placeholder/400/300" alt="Imagen 5" class="w-full rounded-lg gallery-img">
+                <img src="/api/placeholder/400/300" alt="Imagen 6" class="w-full rounded-lg gallery-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Secciones adicionales -->
+    <section id="logros" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">Logros</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Logro 1</h3>
+                    <p>Descripción del logro significativo durante su carrera.</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Logro 2</h3>
+                    <p>Otro logro importante en su trayectoria.</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Logro 3</h3>
+                    <p>Un tercer logro destacable de su carrera.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="text-2xl font-bold mb-6">LLPDM</div>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#biografia" class="hover:text-pink-600">Biografía</a>
+                <a href="#logros" class="hover:text-pink-600">Logros</a>
+                <a href="#carrera" class="hover:text-pink-600">Carrera política</a>
+                <a href="#antecedentes" class="hover:text-pink-600">Antecedentes militares</a>
+                <a href="#economia" class="hover:text-pink-600">Ámbito Económico</a>
+            </div>
+            <p class="text-gray-400">© 2024 Luis La Puerta de Mendoza. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
